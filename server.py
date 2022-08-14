@@ -13,6 +13,10 @@ class MyServer(BaseHTTPRequestHandler):
         self.wfile.write(bytes(html, "utf-8"))
 
     def do_POST(self):
+        query = urlparse(self.path).query
+        params = dict(qc.split("=") for qc in query.split("&"))
+        print(params["date"])
+
         content_length = int(self.headers['Content-Length'])
         print(self.rfile.read(content_length).decode("utf-8"))
 
