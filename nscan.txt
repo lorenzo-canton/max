@@ -1,0 +1,28 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-08-14 14:18 CEST
+Nmap scan report for wind3.hub.wind3.hub (192.168.1.1)
+Host is up (0.19s latency).
+Not shown: 993 closed ports
+PORT    STATE    SERVICE
+21/tcp  open     ftp
+22/tcp  filtered ssh
+23/tcp  filtered telnet
+53/tcp  open     domain
+80/tcp  open     http
+443/tcp open     https
+631/tcp open     ipp
+
+Nmap scan report for 192.168.1.24 (192.168.1.24)
+Host is up (0.00033s latency).
+Not shown: 997 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+3306/tcp open  mysql
+
+Nmap scan report for 192.168.1.56 (192.168.1.56)
+Host is up (0.00013s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE
+7777/tcp open  cbt
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 45.09 seconds
