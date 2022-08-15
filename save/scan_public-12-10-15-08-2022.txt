@@ -1,0 +1,207 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-08-15 12:10 CEST
+Nmap scan report for 176.206.90.252
+Host is up (0.016s latency).
+Not shown: 993 closed ports
+PORT     STATE    SERVICE   VERSION
+21/tcp   open     ftp       vsftpd 2.0.8 or later
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+53/tcp   open     domain    Unbound
+80/tcp   open     http      ZTE web server 1.0 ZTE corp 2015.
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Server: ZTE web server 1.0 ZTE corp 2015.
+|     Accept-Ranges: bytes
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: no-cache,no-store
+|     Content-Length: 6042
+|     Set-Cookie: SID=6d1d7203da699d2657f5cb7019876e638aaadef028fde611fc7a0b1f8c1ee6ff; PATH=/; HttpOnly
+|     Set-Cookie: _TESTCOOKIESUPPORT=1; PATH=/; HttpOnly
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: frame-ancestors 'self' 'unsafe-inline' 'unsafe-eval' data:
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: XSRF-TOKEN=b825691f449626c80c1d39b6f96d53c89f6ac4d9ed1527d69ef20ff611bb2448; PATH=/
+|     <!doctype html>
+|     <html class="no-js" data-ng-app="fw">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+|     <title>Wind3 HUB</title>
+|     <link rel="apple-touch-icon" sizes="57x57" href="css/favicons/apple-icon-57x57.png
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: ZTE web server 1.0 ZTE corp 2015.
+|     Accept-Ranges: bytes
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Type: text/html; charset=iso-8859-1
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' data:
+|     Cache-Control: no-cache,no-store
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="#FFFFFF" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h2>400 Bad Request</h2>
+|     Your request has bad syntax or is inherently impossible to satisfy.
+|     <div style="display:none">
+|     <ajax_response_xml_root>
+|     <IF_ERRORSTR>SessionTimeout</IF_ERRORSTR>
+|     <IF_ERRORPARAM>SUCC</IF_ERRORPARAM>
+|_    <IF_
+|_http-server-header: ZTE web server 1.0 ZTE corp 2015.
+|_http-title: Wind3 HUB
+443/tcp  open     ssl/https ZTE web server 1.0 ZTE corp 2015.
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Server: ZTE web server 1.0 ZTE corp 2015.
+|     Accept-Ranges: bytes
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: no-cache,no-store
+|     Content-Length: 6042
+|     Set-Cookie: SID_HTTPS_=5c795d9398ed03234479c33d79a5975000b320875abfb1d9ac6abdebf47fe4da; PATH=/; HttpOnly; Secure
+|     Set-Cookie: _TESTCOOKIESUPPORT_HTTPS_=1; PATH=/; HttpOnly; Secure
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: frame-ancestors 'self' 'unsafe-inline' 'unsafe-eval' data:
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: HTTPS-XSRF-TOKEN=aa9ff814510af57314deafe43d170815674977d86edca6b25c75fa0d2cff8a39; PATH=/; Secure
+|     Set-Cookie: XSRF-TOKEN=aa9ff814510af57314deafe43d170815674977d86edca6b25c75fa0d2cff8a39; PATH=/; Secure
+|     <!doctype html>
+|     <html class="no-js" data-ng-app="fw">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Comp
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: ZTE web server 1.0 ZTE corp 2015.
+|     Accept-Ranges: bytes
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Type: text/html; charset=iso-8859-1
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' data:
+|     Cache-Control: no-cache,no-store
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="#FFFFFF" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h2>400 Bad Request</h2>
+|     Your request has bad syntax or is inherently impossible to satisfy.
+|     <div style="display:none">
+|     <ajax_response_xml_root>
+|     <IF_ERRORSTR>SessionTimeout</IF_ERRORSTR>
+|     <IF_ERRORPARAM>SUCC</IF_ERRORPARAM>
+|_    <IF_
+|_http-server-header: ZTE web server 1.0 ZTE corp 2015.
+|_http-title: Wind3 HUB
+| ssl-cert: Subject: commonName=192.168.1.1/organizationName=ZTE/stateOrProvinceName=JiangSu/countryName=CN
+| Not valid before: 2016-07-13T01:32:15
+|_Not valid after:  2031-07-10T01:32:15
+7777/tcp open     http      Apache httpd 2.4.54
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| 9.9K  2022-07-12 18:03  androidApp.apk
+| 612   2022-07-01 20:30  index.nginx-debian.html
+| 10K   2022-07-01 20:34  index2.html
+| -     2022-07-04 18:59  scheda/
+| -     2022-07-03 21:56  scripts/
+| 10K   2022-07-02 18:13  scripts/androidApp.apk
+| -     2022-07-17 16:30  website/
+|_
+|_http-server-header: Apache/2.4.54 (Debian)
+|_http-title: Index of /
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.91%I=7%D=8/15%Time=62FA1BB0%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,1A0E,"HTTP/1\.0\x20200\x20OK\r\nServer:\x20ZTE\x20web\x20server\
+SF:x201\.0\x20ZTE\x20corp\x202015\.\r\nAccept-Ranges:\x20bytes\r\nConnecti
+SF:on:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nCache-Control:\x20no-
+SF:cache,no-store\r\nContent-Length:\x206042\r\nSet-Cookie:\x20SID=6d1d720
+SF:3da699d2657f5cb7019876e638aaadef028fde611fc7a0b1f8c1ee6ff;\x20PATH=/;\x
+SF:20HttpOnly\r\nSet-Cookie:\x20_TESTCOOKIESUPPORT=1;\x20PATH=/;\x20HttpOn
+SF:ly\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20
+SF:mode=block\r\nContent-Security-Policy:\x20frame-ancestors\x20'self'\x20
+SF:'unsafe-inline'\x20'unsafe-eval'\x20data:\r\nContent-Type:\x20text/html
+SF:;\x20charset=utf-8\r\nSet-Cookie:\x20XSRF-TOKEN=b825691f449626c80c1d39b
+SF:6f96d53c89f6ac4d9ed1527d69ef20ff611bb2448;\x20PATH=/\r\n\r\n\xef\xbb\xb
+SF:f<!doctype\x20html>\n<html\x20class=\"no-js\"\x20data-ng-app=\"fw\">\n\
+SF:n<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<
+SF:meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"></meta>\n
+SF:\x20\x20\x20\x20<title>Wind3\x20HUB</title>\n\x20\x20\x20\x20<link\x20r
+SF:el=\"apple-touch-icon\"\x20sizes=\"57x57\"\x20href=\"css/favicons/apple
+SF:-icon-57x57\.png")%r(HTTPOptions,5FC,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nServer:\x20ZTE\x20web\x20server\x201\.0\x20ZTE\x20corp\x202015\.\r
+SF:\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=blo
+SF:ck\r\nContent-Security-Policy:\x20default-src\x20'self'\x20'unsafe-inli
+SF:ne'\x20'unsafe-eval'\x20data:\r\nCache-Control:\x20no-cache,no-store\r\
+SF:n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<html>\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<head><title>400\x20Bad\x20Request</title></h
+SF:ead>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<body\x20bgcolor=\"#FFF
+SF:FFF\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#4040cc\">\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>400\x20Bad\x20Request</h2>\
+SF:nYour\x20request\x20has\x20bad\x20syntax\x20or\x20is\x20inherently\x20i
+SF:mpossible\x20to\x20satisfy\.\n<div\x20style=\"display:none\">\n<ajax_re
+SF:sponse_xml_root>\n<IF_ERRORSTR>SessionTimeout</IF_ERRORSTR>\n<IF_ERRORP
+SF:ARAM>SUCC</IF_ERRORPARAM>\n<IF_");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.91%T=SSL%I=7%D=8/15%Time=62FA1BB3%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,1AA3,"HTTP/1\.0\x20200\x20OK\r\nServer:\x20ZTE\x20web\x20
+SF:server\x201\.0\x20ZTE\x20corp\x202015\.\r\nAccept-Ranges:\x20bytes\r\nC
+SF:onnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nCache-Control:
+SF:\x20no-cache,no-store\r\nContent-Length:\x206042\r\nSet-Cookie:\x20SID_
+SF:HTTPS_=5c795d9398ed03234479c33d79a5975000b320875abfb1d9ac6abdebf47fe4da
+SF:;\x20PATH=/;\x20HttpOnly;\x20Secure\r\nSet-Cookie:\x20_TESTCOOKIESUPPOR
+SF:T_HTTPS_=1;\x20PATH=/;\x20HttpOnly;\x20Secure\r\nX-Content-Type-Options
+SF::\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nContent-Securi
+SF:ty-Policy:\x20frame-ancestors\x20'self'\x20'unsafe-inline'\x20'unsafe-e
+SF:val'\x20data:\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nSet-Co
+SF:okie:\x20HTTPS-XSRF-TOKEN=aa9ff814510af57314deafe43d170815674977d86edca
+SF:6b25c75fa0d2cff8a39;\x20PATH=/;\x20Secure\r\nSet-Cookie:\x20XSRF-TOKEN=
+SF:aa9ff814510af57314deafe43d170815674977d86edca6b25c75fa0d2cff8a39;\x20PA
+SF:TH=/;\x20Secure\r\n\r\n\xef\xbb\xbf<!doctype\x20html>\n<html\x20class=\
+SF:"no-js\"\x20data-ng-app=\"fw\">\n\n<head>\n\x20\x20\x20\x20<meta\x20cha
+SF:rset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"X-UA-Comp")%r(HT
+SF:TPOptions,5FC,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20ZTE\x20
+SF:web\x20server\x201\.0\x20ZTE\x20corp\x202015\.\r\nAccept-Ranges:\x20byt
+SF:es\r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent
+SF:-Type:\x20text/html;\x20charset=iso-8859-1\r\nX-Content-Type-Options:\x
+SF:20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nContent-Security-
+SF:Policy:\x20default-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\x2
+SF:0data:\r\nCache-Control:\x20no-cache,no-store\r\n\r\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20<html>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20<head><title>400\x20Bad\x20Request</title></head>\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20<body\x20bgcolor=\"#FFFFFF\"\x20text=\"#000000
+SF:\"\x20link=\"#2020ff\"\x20vlink=\"#4040cc\">\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20<h2>400\x20Bad\x20Request</h2>\nYour\x20request\x20has
+SF:\x20bad\x20syntax\x20or\x20is\x20inherently\x20impossible\x20to\x20sati
+SF:sfy\.\n<div\x20style=\"display:none\">\n<ajax_response_xml_root>\n<IF_E
+SF:RRORSTR>SessionTimeout</IF_ERRORSTR>\n<IF_ERRORPARAM>SUCC</IF_ERRORPARA
+SF:M>\n<IF_");
+Service Info: Hosts: virtual, kent.kent.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 32.51 seconds
