@@ -2,7 +2,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
 import base64
 
-hostName = "192.168.1.24"
+hostName = "192.168.1.56"
 serverPort = 8081
 
 class MyServer(BaseHTTPRequestHandler):

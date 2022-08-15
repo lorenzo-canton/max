@@ -5,7 +5,7 @@ import datetime
 
 x = datetime.datetime.now()
 
-url = 'http://192.168.1.24:8081/?title=public-' + x.strftime("%H-%M-%d-%m-%Y")
+url = 'http://192.168.1.56:8081/?title=public-' + x.strftime("%H-%M-%d-%m-%Y")
 
 hostname = socket.getfqdn()
 
