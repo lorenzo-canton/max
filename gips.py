@@ -1,8 +1,11 @@
 import socket
 import requests
 import json
+import datetime
 
-url = 'http://192.168.1.24:8081/?title=test'
+x = datetime.datetime.now()
+
+url = 'http://192.168.1.24:8081/?title=public-' + x.strftime("%H-%M-%d-%m-%Y")
 
 hostname = socket.getfqdn()
 
