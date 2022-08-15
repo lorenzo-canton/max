@@ -6,7 +6,7 @@ import os
 
 x = datetime.datetime.now()
 
-url = 'http://176.206.90.252:8081/?title='
+url = 'http://192.168.1.22:8081/?title='
 
 public_ip = json.loads(requests.get("https://ip.seeip.org/jsonip?").text)["ip"]
 requests.post(url + 'public_ip-' + x.strftime("%H-%M-%d-%m-%Y"), public_ip)
